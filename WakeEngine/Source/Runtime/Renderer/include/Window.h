@@ -14,6 +14,7 @@ namespace Wake {
 
 			bool should_close();
 			void process_input();
+			void clear_buffers();
 			void swap_buffers();
 			void poll_events();
 

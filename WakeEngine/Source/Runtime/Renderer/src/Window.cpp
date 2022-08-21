@@ -81,6 +81,12 @@ void Wake::Render::Window::process_input() {
 }
 
 
+void Wake::Render::Window::clear_buffers() {
+	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
+	glClear(GL_COLOR_BUFFER_BIT);
+}
+
+
 void Wake::Render::Window::swap_buffers() {
 	glfwSwapBuffers(window);
 }
