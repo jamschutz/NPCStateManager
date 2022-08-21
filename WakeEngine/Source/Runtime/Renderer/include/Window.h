@@ -14,11 +14,13 @@ namespace Wake {
 
 			bool should_close();
 			void process_input();
+			void clear_buffers();
 			void swap_buffers();
 			void poll_events();
 
 			int32_t get_width();
 			int32_t get_height();
+			GLFWwindow* get_glfw_window();
 
 		private:
 			void init(int32_t width, int32_t height);

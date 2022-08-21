@@ -60,46 +60,73 @@
     <ClCompile Include="Source\Runtime\Renderer\src\Window.cpp">
       <Filter>Source Files\Runtime\Render</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Runtime\Renderer\src\Shader.cpp">
-      <Filter>Source Files\Runtime\Render</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Runtime\Renderer\src\RenderSystem.cpp">
-      <Filter>Source Files\Runtime\Render</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Runtime\Utils\src\Debug.cpp">
       <Filter>Source Files\Runtime\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Runtime\Math\src\Vector3.cpp">
-      <Filter>Source Files\Runtime\Math</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Runtime\Renderer\src\Texture.cpp">
-      <Filter>Source Files\Runtime\Render</Filter>
     </ClCompile>
     <ClCompile Include="..\ExternalLibraries\stb_image\stb_image_includer.cpp">
       <Filter>Source Files\ExternalSourceFiles</Filter>
     </ClCompile>
+    <ClCompile Include="..\ExternalLibraries\imgui\imgui.cpp">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibraries\imgui\imgui_demo.cpp">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibraries\imgui\imgui_draw.cpp">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibraries\imgui\imgui_impl_glfw.cpp">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibraries\imgui\imgui_impl_opengl3.cpp">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibraries\imgui\imgui_tables.cpp">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibraries\imgui\imgui_widgets.cpp">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Runtime\Renderer\include\RenderSystem.h">
-      <Filter>Header Files\Runtime\Render</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Runtime\Renderer\include\Shader.h">
-      <Filter>Header Files\Runtime\Render</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Runtime\Renderer\include\Window.h">
       <Filter>Header Files\Runtime\Render</Filter>
     </ClInclude>
     <ClInclude Include="Source\Runtime\Utils\include\Debug.h">
       <Filter>Header Files\Runtime\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Runtime\Math\include\Vector3.h">
-      <Filter>Header Files\Runtime\Math</Filter>
-    </ClInclude>
     <ClInclude Include="..\ExternalLibraries\stb_image\stb_image.h">
       <Filter>Source Files\ExternalSourceFiles</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Runtime\Renderer\include\Texture.h">
-      <Filter>Header Files\Runtime\Render</Filter>
+    <ClInclude Include="..\ExternalLibraries\imgui\imconfig.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibraries\imgui\imgui.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibraries\imgui\imgui_impl_glfw.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibraries\imgui\imgui_impl_opengl3.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibraries\imgui\imgui_internal.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibraries\imgui\imstb_rectpack.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibraries\imgui\imstb_textedit.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibraries\imgui\imstb_truetype.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibraries\glfw-3.3.3.bin.WIN64\glfw-3.3.3.bin.WIN64\include\GLFW\glfw3.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibraries\imgui\imgui_impl_opengl3_loader.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
