@@ -108,3 +108,8 @@ int32_t Wake::Render::Window::get_height() {
 	glfwGetWindowSize(window, &width, &height);
 	return height;
 }
+
+
+GLFWwindow* Wake::Render::Window::get_glfw_window() {
+	return window;
+}

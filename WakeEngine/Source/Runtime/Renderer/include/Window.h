@@ -19,6 +19,7 @@ namespace Wake {
 
 			int32_t get_width();
 			int32_t get_height();
+			GLFWwindow* get_glfw_window();
 
 		private:
 			void init(int32_t width, int32_t height);

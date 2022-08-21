@@ -3,6 +3,10 @@
 #include "Source/Runtime/Renderer/include/RenderSystem.h"
 #include <iostream>
 
+#include "../ExternalLibraries/imgui/imgui.h"
+#include "../ExternalLibraries/imgui/imgui_impl_glfw.h"
+#include "../ExternalLibraries/imgui/imgui_impl_opengl3.h"
+
 
 // following tutorial here: https://learnopengl.com/Getting-started/Hello-Window
 int main() {
@@ -10,14 +14,20 @@ int main() {
 	Wake::Render::Window window(800, 600);
 	Wake::Render::RenderSystem render_system(&window);
 
-	// load shader
-	Wake::Shader shader("Source/Shaders/vert.glsl", "Source/Shaders/frag.glsl");
+	// Setup Dear ImGui context
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+	//io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
+	//io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
-	// activate shader before setting uniforms
-	shader.activate();
-	// apply uniforms
-	shader.set_int("texture1", 0);
-	shader.set_int("texture2", 1);
+	// Setup Dear ImGui style
+	ImGui::StyleColorsDark();
+	//ImGui::StyleColorsClassic();
+
+	// Setup Platform/Renderer backends
+	ImGui_ImplGlfw_InitForOpenGL(window.get_glfw_window(), true);
+	ImGui_ImplOpenGL3_Init("#version 330");
 
 	// render loop
 	while (!window.should_close()) {
@@ -25,7 +35,7 @@ int main() {
 		window.process_input();
 
 		// render
-		render_system.render(shader);
+		//render_system.render(shader);
 		window.poll_events();
 	}
 
