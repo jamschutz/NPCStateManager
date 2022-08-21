@@ -5,11 +5,16 @@
 #include "../ExternalLibraries/imgui/imgui_impl_glfw.h"
 #include "../ExternalLibraries/imgui/imgui_impl_opengl3.h"
 
+#include "Source/Runtime/NPC/include/NPC.h"
+
 
 // following tutorial here: https://learnopengl.com/Getting-started/Hello-Window
 int main() {
 	// init window and render system
 	Wake::Render::Window window(800, 600);
+
+	// create dummy character
+	NPCManager::NPC joey("Joey");
 
 	// Setup Dear ImGui context
 	IMGUI_CHECKVERSION();
