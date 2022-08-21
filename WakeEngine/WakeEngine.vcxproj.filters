@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\ExternalSourceFiles">
+      <UniqueIdentifier>{425550b9-41de-4ea3-9bf0-b0241258c175}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ShaderFiles">
+      <UniqueIdentifier>{7de8f2c7-f873-4e05-abdc-1ff70374a3c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime">
+      <UniqueIdentifier>{e395ba44-aea5-4994-bbc7-1b3f0656d873}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Render">
+      <UniqueIdentifier>{167731d8-7e8d-4de5-acb3-09a09e7cf386}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Utils">
+      <UniqueIdentifier>{e5ccd549-a5f2-4ee1-b0d9-d7e1ee3004a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime">
+      <UniqueIdentifier>{7079b660-9cc2-467d-bc57-ce11686e3c44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Render">
+      <UniqueIdentifier>{45723c78-e9f5-4935-b88d-e5c7e653e169}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Utils">
+      <UniqueIdentifier>{a3742d79-2533-490d-9531-198d6e1a8e28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Runtime\Math">
+      <UniqueIdentifier>{f9052222-d317-4ba1-86d3-040eec99b1c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Runtime\Math">
+      <UniqueIdentifier>{e00dbd37-0456-4a30-91fb-b75f0f2ad06d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Tests">
+      <UniqueIdentifier>{b59a48f4-8dba-4bff-b21e-9b38378dba0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ExternalLibraries">
+      <UniqueIdentifier>{499913cb-f8c2-4c22-bdd8-8819e61264b6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibraries\GLAD\src\glad.c">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Runtime\Renderer\src\Window.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Runtime\Renderer\src\Shader.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Runtime\Renderer\src\RenderSystem.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Runtime\Utils\src\Debug.cpp">
+      <Filter>Source Files\Runtime\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Runtime\Math\src\Vector3.cpp">
+      <Filter>Source Files\Runtime\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Runtime\Renderer\src\Texture.cpp">
+      <Filter>Source Files\Runtime\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ExternalLibraries\stb_image\stb_image_includer.cpp">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Runtime\Renderer\include\RenderSystem.h">
+      <Filter>Header Files\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Runtime\Renderer\include\Shader.h">
+      <Filter>Header Files\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Runtime\Renderer\include\Window.h">
+      <Filter>Header Files\Runtime\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Runtime\Utils\include\Debug.h">
+      <Filter>Header Files\Runtime\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Runtime\Math\include\Vector3.h">
+      <Filter>Header Files\Runtime\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ExternalLibraries\stb_image\stb_image.h">
+      <Filter>Source Files\ExternalSourceFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Runtime\Renderer\include\Texture.h">
+      <Filter>Header Files\Runtime\Render</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\frag.glsl">
+      <Filter>Source Files\ShaderFiles</Filter>
+    </None>
+    <None Include="Source\Shaders\vert.glsl">
+      <Filter>Source Files\ShaderFiles</Filter>
+    </None>
+    <None Include="Source\Shaders\frag_yellow.glsl">
+      <Filter>Source Files\ShaderFiles</Filter>
+    </None>
+  </ItemGroup>
+</Project>
