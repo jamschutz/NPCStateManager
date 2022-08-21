@@ -90,6 +90,9 @@
     <ClCompile Include="Source\Runtime\NPC\src\NPC.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Runtime\Renderer\src\Grid.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Runtime\Renderer\include\Window.h">
@@ -132,6 +135,12 @@
       <Filter>Source Files\ExternalSourceFiles</Filter>
     </ClInclude>
     <ClInclude Include="Source\Runtime\NPC\include\NPC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Runtime\NPC\include\NPCEmotion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Runtime\Renderer\include\Grid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
