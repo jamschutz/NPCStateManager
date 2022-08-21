@@ -60,9 +60,6 @@
     <ClCompile Include="Source\Runtime\Renderer\src\Window.cpp">
       <Filter>Source Files\Runtime\Render</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Runtime\Renderer\src\Shader.cpp">
-      <Filter>Source Files\Runtime\Render</Filter>
-    </ClCompile>
     <ClCompile Include="Source\Runtime\Utils\src\Debug.cpp">
       <Filter>Source Files\Runtime\Utils</Filter>
     </ClCompile>
@@ -98,9 +95,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Source\Runtime\Renderer\include\Shader.h">
-      <Filter>Header Files\Runtime\Render</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Runtime\Renderer\include\Window.h">
       <Filter>Header Files\Runtime\Render</Filter>
     </ClInclude>

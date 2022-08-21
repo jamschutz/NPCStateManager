@@ -1,5 +1,4 @@
 #include "Source/Runtime/Renderer/include/Window.h"
-#include "Source/Runtime/Renderer/include/Shader.h"
 #include <iostream>
 
 #include "../ExternalLibraries/imgui/imgui.h"
