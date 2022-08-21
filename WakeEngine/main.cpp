@@ -1,6 +1,5 @@
 #include "Source/Runtime/Renderer/include/Window.h"
 #include "Source/Runtime/Renderer/include/Shader.h"
-#include "Source/Runtime/Renderer/include/RenderSystem.h"
 #include <iostream>
 
 #include "../ExternalLibraries/imgui/imgui.h"
@@ -12,7 +11,6 @@
 int main() {
 	// init window and render system
 	Wake::Render::Window window(800, 600);
-	Wake::Render::RenderSystem render_system(&window);
 
 	// Setup Dear ImGui context
 	IMGUI_CHECKVERSION();

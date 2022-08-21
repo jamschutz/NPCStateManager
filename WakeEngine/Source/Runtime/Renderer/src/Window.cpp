@@ -27,8 +27,8 @@ Wake::Render::Window::~Window() {
 void Wake::Render::Window::init(int32_t width, int32_t height) {
 	/* Init GLFW */
 	glfwInit();
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, Wake::Render::RenderSystem::opengl_major);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, Wake::Render::RenderSystem::opengl_minor);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 
 #if ___APPLE___ && TARGET_OS_MAC
