@@ -135,7 +135,6 @@
     <ClCompile Include="..\ExternalLibraries\stb_image\stb_image_includer.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Source\Runtime\Math\src\Vector3.cpp" />
-    <ClCompile Include="Source\Runtime\Renderer\src\Texture.cpp" />
     <ClCompile Include="Source\Runtime\Renderer\src\Window.cpp" />
     <ClCompile Include="Source\Runtime\Utils\src\Debug.cpp" />
   </ItemGroup>
@@ -152,7 +151,6 @@
     <ClInclude Include="..\ExternalLibraries\imgui\imstb_truetype.h" />
     <ClInclude Include="..\ExternalLibraries\stb_image\stb_image.h" />
     <ClInclude Include="Source\Runtime\Math\include\Vector3.h" />
-    <ClInclude Include="Source\Runtime\Renderer\include\Texture.h" />
     <ClInclude Include="Source\Runtime\Renderer\include\Window.h" />
     <ClInclude Include="Source\Runtime\Utils\include\Debug.h" />
   </ItemGroup>

@@ -66,9 +66,6 @@
     <ClCompile Include="Source\Runtime\Math\src\Vector3.cpp">
       <Filter>Source Files\Runtime\Math</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Runtime\Renderer\src\Texture.cpp">
-      <Filter>Source Files\Runtime\Render</Filter>
-    </ClCompile>
     <ClCompile Include="..\ExternalLibraries\stb_image\stb_image_includer.cpp">
       <Filter>Source Files\ExternalSourceFiles</Filter>
     </ClCompile>
@@ -106,9 +103,6 @@
     </ClInclude>
     <ClInclude Include="..\ExternalLibraries\stb_image\stb_image.h">
       <Filter>Source Files\ExternalSourceFiles</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Runtime\Renderer\include\Texture.h">
-      <Filter>Header Files\Runtime\Render</Filter>
     </ClInclude>
     <ClInclude Include="..\ExternalLibraries\imgui\imconfig.h">
       <Filter>Source Files\ExternalSourceFiles</Filter>
