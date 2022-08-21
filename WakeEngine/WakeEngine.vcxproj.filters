@@ -63,9 +63,6 @@
     <ClCompile Include="Source\Runtime\Utils\src\Debug.cpp">
       <Filter>Source Files\Runtime\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Runtime\Math\src\Vector3.cpp">
-      <Filter>Source Files\Runtime\Math</Filter>
-    </ClCompile>
     <ClCompile Include="..\ExternalLibraries\stb_image\stb_image_includer.cpp">
       <Filter>Source Files\ExternalSourceFiles</Filter>
     </ClCompile>
@@ -97,9 +94,6 @@
     </ClInclude>
     <ClInclude Include="Source\Runtime\Utils\include\Debug.h">
       <Filter>Header Files\Runtime\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Runtime\Math\include\Vector3.h">
-      <Filter>Header Files\Runtime\Math</Filter>
     </ClInclude>
     <ClInclude Include="..\ExternalLibraries\stb_image\stb_image.h">
       <Filter>Source Files\ExternalSourceFiles</Filter>
