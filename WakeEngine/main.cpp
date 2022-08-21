@@ -34,6 +34,7 @@ int main() {
 		grid.render();
 		window.swap_buffers();
 
+		// poll events
 		window.poll_events();
 	}
 
