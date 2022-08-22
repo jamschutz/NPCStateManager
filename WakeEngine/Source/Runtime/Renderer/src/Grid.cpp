@@ -1,6 +1,9 @@
 #pragma once
 
 #include "../include/Grid.h"
+#include "../../NPC/include/NPC.h"
+#include "../../NPC/include/NPCManager.h"
+
 #include <iostream>
 
 
@@ -29,9 +32,9 @@ NPCManager::UI::Grid::~Grid() {
 void NPCManager::UI::Grid::render() {
 	ImGui::Begin("Grid");
 
-	ImGui::Button("Hello");
-	static float value = 0.0f;
-	ImGui::DragFloat("Value", &value);
+	for (NPC npc : NPCManager::get_instance().get_npcs()) {
+		ImGui::Button(npc.name.c_str());
+	}
 
 	ImGui::End();
 }

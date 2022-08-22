@@ -36,7 +36,7 @@ namespace NPCManager
 			ImGui::Button(npc.name.c_str());
 		}
 
-			ImGui::End();
+		ImGui::End();
 	}
 
 }
