@@ -3,7 +3,7 @@
 #include "glad.h"
 #include "../../../glfw-3.3.3.bin.WIN64/glfw-3.3.3.bin.WIN64/include/GLFW/glfw3.h"
 
-namespace Wake {
+namespace NPCManager {
 	namespace Render {
 		class Window
 		{

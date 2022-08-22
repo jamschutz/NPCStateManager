@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "Source/Runtime/Renderer/include/Window.h"
+#include "Source/Runtime/Renderer/include/RenderSystem.h"
 #include "Source/Runtime/Renderer/include/Grid.h"
 #include "Source/Runtime/NPC/include/NPC.h"
 
@@ -12,8 +13,9 @@
 // following tutorial here: https://learnopengl.com/Getting-started/Hello-Window
 int main() {
 	// init window and render system
-	Wake::Render::Window window(800, 600);
-	NPCManager::UI::Grid grid(window.get_glfw_window());
+	NPCManager::Render::Window window(800, 600);
+	NPCManager::RenderSystem renderer(&window);
+	//NPCManager::UI::Grid grid();
 
 	// create dummy character
 	NPCManager::NPC joey("Joey");
@@ -31,7 +33,7 @@ int main() {
 
 		// render
 		window.clear_buffers();
-		grid.render();
+		renderer.render();
 		window.swap_buffers();
 
 		// poll events

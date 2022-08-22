@@ -1,7 +1,6 @@
 #pragma once
 
 #include "../include/Window.h"
-#include "../include/RenderSystem.h"
 #include "../../Utils/include/Debug.h"
 
 
@@ -10,21 +9,21 @@
 /  ======================================================================= */
 
 
-Wake::Render::Window::Window() {
+NPCManager::Render::Window::Window() {
 	init(800, 600);
 }
 
 
-Wake::Render::Window::Window(int32_t width, int32_t height) {
+NPCManager::Render::Window::Window(int32_t width, int32_t height) {
 	init(width, height);
 }
 
 
-Wake::Render::Window::~Window() {
+NPCManager::Render::Window::~Window() {
 	glfwTerminate();
 }
 
-void Wake::Render::Window::init(int32_t width, int32_t height) {
+void NPCManager::Render::Window::init(int32_t width, int32_t height) {
 	/* Init GLFW */
 	glfwInit();
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
@@ -64,7 +63,7 @@ void Wake::Render::Window::init(int32_t width, int32_t height) {
 /  ======================================================================= */
 
 
-void Wake::Render::Window::on_resize(GLFWwindow* resized_window, int width, int height) {
+void NPCManager::Render::Window::on_resize(GLFWwindow* resized_window, int width, int height) {
 	glViewport(0, 0, width, height);
 }
 
@@ -75,47 +74,47 @@ void Wake::Render::Window::on_resize(GLFWwindow* resized_window, int width, int 
 /  ======================================================================= */
 
 
-void Wake::Render::Window::process_input() {
+void NPCManager::Render::Window::process_input() {
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, true);
 }
 
 
-void Wake::Render::Window::clear_buffers() {
+void NPCManager::Render::Window::clear_buffers() {
 	glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 }
 
 
-void Wake::Render::Window::swap_buffers() {
+void NPCManager::Render::Window::swap_buffers() {
 	glfwSwapBuffers(window);
 }
 
 
-void Wake::Render::Window::poll_events() {
+void NPCManager::Render::Window::poll_events() {
 	glfwPollEvents();
 }
 
 
-bool Wake::Render::Window::should_close() {
+bool NPCManager::Render::Window::should_close() {
 	return glfwWindowShouldClose(window);
 }
 
 
-int32_t Wake::Render::Window::get_width() {
+int32_t NPCManager::Render::Window::get_width() {
 	int width, height;
 	glfwGetWindowSize(window, &width, &height);
 	return width;
 }
 
 
-int32_t Wake::Render::Window::get_height() {
+int32_t NPCManager::Render::Window::get_height() {
 	int width, height;
 	glfwGetWindowSize(window, &width, &height);
 	return height;
 }
 
 
-GLFWwindow* Wake::Render::Window::get_glfw_window() {
+GLFWwindow* NPCManager::Render::Window::get_glfw_window() {
 	return window;
 }
