@@ -11,15 +11,18 @@ namespace NPCManager
 	public:
 		// constructors
 		NPC();
-		NPC(std::string _name);
+		NPC(char* _name);
+		NPC(const char* _name);
 		~NPC();
 
 		// get methods
 
 		// set methods
 
-		std::string name;
+		char name[64];
 		Emotion emotion;
+
+		static const int MAX_NAME_LENGTH = 64;
 	private:
 		int id;
 	};

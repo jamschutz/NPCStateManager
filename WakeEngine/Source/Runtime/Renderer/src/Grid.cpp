@@ -33,7 +33,7 @@ void NPCManager::UI::Grid::render() {
 	ImGui::Begin("Grid");
 
 	for (NPC npc : NPCManager::get_instance().get_npcs()) {
-		ImGui::Button(npc.name.c_str());
+		ImGui::Button(npc.name);
 	}
 
 	ImGui::End();

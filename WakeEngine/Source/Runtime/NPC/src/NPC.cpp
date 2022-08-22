@@ -2,7 +2,7 @@
 
 #include "../include/NPC.h"
 
-#include <string>
+#include <cstring>
 
 /* =======================================================================  /
 /  =======	   Constructor/Destructors		==============================  /
@@ -10,12 +10,17 @@
 
 
 NPCManager::NPC::NPC() {
-	name = "";
+	strcpy_s(name, "");
 }
 
 
-NPCManager::NPC::NPC(std::string _name) {
-	name = _name;
+NPCManager::NPC::NPC(char* _name) {
+	strcpy_s(name, _name);
+}
+
+
+NPCManager::NPC::NPC(const char* _name) {
+	strcpy_s(name, _name);
 }
 
 

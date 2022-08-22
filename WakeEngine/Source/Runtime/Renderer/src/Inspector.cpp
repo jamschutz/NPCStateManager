@@ -34,10 +34,13 @@ namespace NPCManager
 		ImGui::Begin("Inspector");
 		
 		for (NPC npc : NPCManager::get_instance().get_npcs()) {
-			if (ImGui::TreeNode(npc.name.c_str()))
+			if (ImGui::TreeNode(npc.name))
 			{
 				// name
-				ImGui::Text(("Name: " + npc.name).c_str());
+				char name_value[npc.MAX_NAME_LENGTH + 6] = "Name: ";
+				strcat_s(name_value, npc.MAX_NAME_LENGTH + 6, npc.name);
+				ImGui::Text(name_value);
+				static char buf1[64] = ""; ImGui::InputText("default", buf1, 64);
 				// emotion
 				ImGui::Text(("Emotion: " + emotion_to_string(npc.emotion)).c_str());
 
