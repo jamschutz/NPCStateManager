@@ -13,7 +13,11 @@ namespace NPCManager
 
 
 	NPCManager::NPCManager::NPCManager() {
-		// do nothing for now...
+		NPC joey("Joey");
+		NPC hao("Hao");
+
+		npcs.push_back(joey);
+		npcs.push_back(hao);
 	}
 
 

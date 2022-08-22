@@ -1,37 +1,42 @@
 #pragma once
 
 #include "../include/Inspector.h"
+#include "../../NPC/include/NPC.h"
+#include "../../NPC/include/NPCManager.h"
 #include <iostream>
 
 
-
-/* =======================================================================  /
-/  =======	   Constructor/Destructors		==============================  /
-/  ======================================================================= */
-
-
-NPCManager::UI::Inspector::Inspector() {
-
-}
+namespace NPCManager
+{
+	/* =======================================================================  /
+	/  =======	   Constructor/Destructors		==============================  /
+	/  ======================================================================= */
 
 
-NPCManager::UI::Inspector::~Inspector() {
+	UI::Inspector::Inspector() {
 
-}
-
-
-
-/* =======================================================================  /
-/  =======	   Public Methods				==============================  /
-/  ======================================================================= */
+	}
 
 
-void NPCManager::UI::Inspector::render() {
-	ImGui::Begin("Inspector");
+	UI::Inspector::~Inspector() {
 
-	ImGui::Button("Hello");
-	static float value = 0.0f;
-	ImGui::DragFloat("Value", &value);
+	}
 
-	ImGui::End();
+
+
+	/* =======================================================================  /
+	/  =======	   Public Methods				==============================  /
+	/  ======================================================================= */
+
+
+	void UI::Inspector::render() {
+		ImGui::Begin("Inspector");
+
+		for (NPC npc : NPCManager::get_instance().get_npcs()) {
+			ImGui::Button(npc.name.c_str());
+		}
+
+			ImGui::End();
+	}
+
 }
