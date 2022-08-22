@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../include/Grid.h"
+#include "../include/Inspector.h"
 #include <iostream>
 
 
@@ -10,13 +10,13 @@
 /  ======================================================================= */
 
 
-NPCManager::UI::Grid::Grid() {
-	
+NPCManager::UI::Inspector::Inspector() {
+
 }
 
 
-NPCManager::UI::Grid::~Grid() {
-	
+NPCManager::UI::Inspector::~Inspector() {
+
 }
 
 
@@ -26,8 +26,8 @@ NPCManager::UI::Grid::~Grid() {
 /  ======================================================================= */
 
 
-void NPCManager::UI::Grid::render() {
-	ImGui::Begin("Grid");
+void NPCManager::UI::Inspector::render() {
+	ImGui::Begin("Inspector");
 
 	ImGui::Button("Hello");
 	static float value = 0.0f;

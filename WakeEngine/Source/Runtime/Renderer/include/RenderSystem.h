@@ -1,6 +1,9 @@
 #pragma once
 
 #include "../include/Window.h"
+#include "../include/Inspector.h"
+#include "../include/Grid.h"
+#include "../include/MenuBar.h"
 
 #include "../../../../../ExternalLibraries/imgui/imgui_impl_glfw.h"
 #include "../../../../../ExternalLibraries/imgui/imgui_impl_glfw.h"
@@ -26,6 +29,10 @@ namespace NPCManager
 
 	private:
 		Render::Window* window;
+		UI::Grid grid;
+		UI::Inspector inspector;
+		UI::MenuBar menuBar;
+
 		ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 	};
 

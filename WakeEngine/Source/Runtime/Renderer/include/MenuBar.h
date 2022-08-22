@@ -8,15 +8,15 @@ namespace NPCManager
 {
 	namespace UI
 	{
-		class Grid
+		class MenuBar
 		{
 		public:
 			// constructors
-			Grid();
-			~Grid();
+			MenuBar();
+			~MenuBar();
 
 			// render methods
-			void render();
+			void render(bool& opt_fullscreen, bool& opt_padding, ImGuiDockNodeFlags dockspace_flags);
 
 			// get methods
 
@@ -25,5 +25,5 @@ namespace NPCManager
 		private:
 		};
 	}
-	
+
 }

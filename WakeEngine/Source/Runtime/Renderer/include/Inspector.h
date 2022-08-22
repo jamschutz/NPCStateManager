@@ -8,12 +8,12 @@ namespace NPCManager
 {
 	namespace UI
 	{
-		class Grid
+		class Inspector
 		{
 		public:
 			// constructors
-			Grid();
-			~Grid();
+			Inspector();
+			~Inspector();
 
 			// render methods
 			void render();
@@ -25,5 +25,5 @@ namespace NPCManager
 		private:
 		};
 	}
-	
+
 }

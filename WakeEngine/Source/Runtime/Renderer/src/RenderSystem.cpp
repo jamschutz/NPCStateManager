@@ -46,6 +46,9 @@ NPCManager::RenderSystem::~RenderSystem() {
 
 
 void NPCManager::RenderSystem::render() {
+	// clear window buffers
+	window->clear_buffers();
+
 	// enable docking
 	ImGuiIO& io = ImGui::GetIO();
 	io.ConfigFlags |= ImGuiConfigFlags_DockingEnable;
@@ -101,48 +104,18 @@ void NPCManager::RenderSystem::render() {
 	{
 		ImGuiID dockspace_id = ImGui::GetID("MyDockSpace");
 		ImGui::DockSpace(dockspace_id, ImVec2(0.0f, 0.0f), dockspace_flags);
-		std::cout << "\ndocking works!";
-	}
-	else
-	{
-		std::cout << "\nERROR: Docking Disabled!!!!";
 	}
 
-	if (ImGui::BeginMenuBar())
-	{
-		if (ImGui::BeginMenu("Options"))
-		{
-			// Disabling fullscreen would allow the window to be moved to the front of other windows,
-			// which we can't undo at the moment without finer window depth/z control.
-			ImGui::MenuItem("Fullscreen", NULL, &opt_fullscreen);
-			ImGui::MenuItem("Padding", NULL, &opt_padding);
-			ImGui::Separator();
+	// render menu bar
+	menuBar.render(opt_fullscreen, opt_padding, dockspace_flags);
 
-			if (ImGui::MenuItem("Flag: NoSplit", "", (dockspace_flags & ImGuiDockNodeFlags_NoSplit) != 0)) { dockspace_flags ^= ImGuiDockNodeFlags_NoSplit; }
-			if (ImGui::MenuItem("Flag: NoResize", "", (dockspace_flags & ImGuiDockNodeFlags_NoResize) != 0)) { dockspace_flags ^= ImGuiDockNodeFlags_NoResize; }
-			if (ImGui::MenuItem("Flag: NoDockingInCentralNode", "", (dockspace_flags & ImGuiDockNodeFlags_NoDockingInCentralNode) != 0)) { dockspace_flags ^= ImGuiDockNodeFlags_NoDockingInCentralNode; }
-			if (ImGui::MenuItem("Flag: AutoHideTabBar", "", (dockspace_flags & ImGuiDockNodeFlags_AutoHideTabBar) != 0)) { dockspace_flags ^= ImGuiDockNodeFlags_AutoHideTabBar; }
-			if (ImGui::MenuItem("Flag: PassthruCentralNode", "", (dockspace_flags & ImGuiDockNodeFlags_PassthruCentralNode) != 0, opt_fullscreen)) { dockspace_flags ^= ImGuiDockNodeFlags_PassthruCentralNode; }
-			ImGui::Separator();
+	// draw the grid
+	grid.render();
 
-			ImGui::EndMenu();
-		}
-
-		ImGui::EndMenuBar();
-	}
-
-	// Draw the grid
-	ImGui::Begin("Grid");
-
-	ImGui::Button("Hello");
-	static float value = 0.0f;
-	ImGui::DragFloat("Value", &value);
+	// draw the inspector
+	inspector.render();
 
 	ImGui::End();
-
-	ImGui::End();
-
-	ImGui::ShowDemoWindow();
 
 
 
@@ -151,4 +124,8 @@ void NPCManager::RenderSystem::render() {
 	// Render ImGui
 	ImGui::Render();
 	ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
+
+	// swap window buffers
+	window->swap_buffers();
 }

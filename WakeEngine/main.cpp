@@ -15,15 +15,9 @@ int main() {
 	// init window and render system
 	NPCManager::Render::Window window(800, 600);
 	NPCManager::RenderSystem renderer(&window);
-	//NPCManager::UI::Grid grid();
 
 	// create dummy character
 	NPCManager::NPC joey("Joey");
-
-	// imgui stuff
-	bool show_demo_window = true;
-	bool show_another_window = false;
-	ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
 	// render loop
 	while (!window.should_close()) {
@@ -32,9 +26,7 @@ int main() {
 		window.process_input();
 
 		// render
-		window.clear_buffers();
 		renderer.render();
-		window.swap_buffers();
 
 		// poll events
 		window.poll_events();
