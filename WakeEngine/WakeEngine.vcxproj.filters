@@ -102,6 +102,9 @@
     <ClCompile Include="Source\Runtime\Renderer\src\MenuBar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Runtime\NPC\src\NPCManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Runtime\Renderer\include\Window.h">
@@ -159,6 +162,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Source\Runtime\Renderer\include\MenuBar.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Runtime\NPC\include\NPCManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

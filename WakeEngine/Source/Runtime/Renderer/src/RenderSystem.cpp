@@ -117,7 +117,8 @@ void NPCManager::RenderSystem::render() {
 
 	ImGui::End();
 
-
+	// show demo window
+	ImGui::ShowDemoWindow();
 
 
 

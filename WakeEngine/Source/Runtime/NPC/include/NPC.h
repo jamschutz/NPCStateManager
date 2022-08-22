@@ -19,6 +19,7 @@ namespace NPCManager
 		// set methods
 
 	private:
+		int id;
 		std::string name;
 		Emotion emotion;
 	};
