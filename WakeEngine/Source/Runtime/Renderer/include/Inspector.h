@@ -4,6 +4,8 @@
 #include "../../../../../ExternalLibraries/imgui/imgui_impl_glfw.h"
 #include "../../../../../ExternalLibraries/imgui/imgui_impl_opengl3.h"
 
+#include <vector>
+
 namespace NPCManager
 {
 	namespace UI

@@ -43,14 +43,12 @@ namespace NPCManager
 				ImGui::InputText("###name", npc.name, NPC::MAX_NAME_LENGTH);
 		
 				// emotion
+				int selected_emotion = static_cast<int>(npc.emotion);
 				ImGui::Text(("Emotion: ")); ImGui::SameLine();
-				const char* items[] = { "AAAA", "BBBB", "CCCC", "DDDD" };
-				static int item = -1;
-				ImGui::Combo("###emotion", &item, items, IM_ARRAYSIZE(items));
-
-				//ImGui::Text(("Emotion: " + emotion_to_string(npc.emotion)).c_str()); ImGui::SameLine();
+				ImGui::Combo("###emotion", &selected_emotion, EMOTIONS_AVAILABLE, IM_ARRAYSIZE(EMOTIONS_AVAILABLE));
 		
 				// update npc name
+				npc.emotion = static_cast<Emotion>(selected_emotion);
 				NPCManager::get_instance().update_npc(npc);
 		
 				// close tree

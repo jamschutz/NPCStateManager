@@ -4,14 +4,15 @@
 
 namespace NPCManager
 {
+	// NOTE: if you update this, just make sure to update the static methods below!!!!
 	enum Emotion {
-		Happy,
-		Sad,
-		Angry,
-		Anxious,
-		Surprised,
-		Disgusted,
-		Afraid,
+		Happy = 0,
+		Sad = 1,
+		Angry = 2,
+		Anxious = 3,
+		Surprised = 4,
+		Disgusted = 5,
+		Afraid = 6,
 		TERMINAL_VALUE // just used to make iterating easier. ALWAYS keep this the last value
 	};
 
@@ -36,4 +37,15 @@ namespace NPCManager
 			return "Unknown Emotion :(";
 		}
 	}
+
+	// make sure to keep this in the same order as the enum!!!!
+	static const char* EMOTIONS_AVAILABLE[] = {
+		"Happy",
+		"Sad",
+		"Angry",
+		"Anxious",
+		"Surprised",
+		"Disgusted",
+		"Afraid"
+	};
 }
