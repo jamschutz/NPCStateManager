@@ -33,9 +33,7 @@ void NPCManager::UI::Grid::render() {
 	ImGui::Begin("Grid");
 
 	for (NPC npc : NPCManager::get_instance().get_npcs()) {
-		std::string label = npc.name;
-		label += "###" + npc.get_id();
-		ImGui::Button(label.c_str());
+		ImGui::Button(npc.get_imgui_label().c_str());
 	}
 
 	ImGui::End();

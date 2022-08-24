@@ -18,6 +18,7 @@ namespace NPCManager
 
 		// get methods
 		std::string get_id();
+		std::string get_imgui_label();
 
 		// set methods
 

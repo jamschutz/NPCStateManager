@@ -35,12 +35,8 @@ namespace NPCManager
 
 		std::vector<NPC> npcs = NPCManager::get_instance().get_npcs();
 		
-		for (NPC npc : NPCManager::get_instance().get_npcs()) {
-			// we can't have an empty string as a label, so just as a precaution make it a space
-			std::string label = npc.name;
-			label += "###" + npc.get_id();
-		
-			if (ImGui::TreeNode(label.c_str()))
+		for (NPC npc : NPCManager::get_instance().get_npcs()) {		
+			if (ImGui::TreeNode(npc.get_imgui_label().c_str()))
 			{
 				// name
 				ImGui::Text("Name: "); ImGui::SameLine();

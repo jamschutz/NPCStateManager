@@ -44,3 +44,10 @@ std::string NPCManager::NPC::get_id() {
 	std::cout << "\nnpc with name '" << "name" << "' has id: " << id.id;
 	return id.id;
 }
+
+
+std::string NPCManager::NPC::get_imgui_label() {
+	std::string label = name;
+	label += "###" + get_id();
+	return label;
+}
