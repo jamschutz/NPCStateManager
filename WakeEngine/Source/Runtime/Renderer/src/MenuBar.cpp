@@ -27,26 +27,50 @@ NPCManager::UI::MenuBar::~MenuBar() {
 
 
 void NPCManager::UI::MenuBar::render(bool& opt_fullscreen, bool& opt_padding, ImGuiDockNodeFlags dockspace_flags) {
+	// You can pass in a reference ImGuiStyle structure to compare to, revert to and save to
+	// (without a reference style pointer, we will use one compared locally as a reference)
+	ImGuiStyle& style = ImGui::GetStyle();
+	static ImGuiStyle ref_saved_style;
+
 	if (ImGui::BeginMenuBar())
 	{
 		if (ImGui::BeginMenu("Options"))
 		{
-			// Disabling fullscreen would allow the window to be moved to the front of other windows,
-			// which we can't undo at the moment without finer window depth/z control.
-			ImGui::MenuItem("Fullscreen", NULL, &opt_fullscreen);
 			ImGui::MenuItem("Padding", NULL, &opt_padding);
 			ImGui::Separator();
 
-			if (ImGui::MenuItem("Flag: NoSplit", "", (dockspace_flags & ImGuiDockNodeFlags_NoSplit) != 0)) { dockspace_flags ^= ImGuiDockNodeFlags_NoSplit; }
-			if (ImGui::MenuItem("Flag: NoResize", "", (dockspace_flags & ImGuiDockNodeFlags_NoResize) != 0)) { dockspace_flags ^= ImGuiDockNodeFlags_NoResize; }
-			if (ImGui::MenuItem("Flag: NoDockingInCentralNode", "", (dockspace_flags & ImGuiDockNodeFlags_NoDockingInCentralNode) != 0)) { dockspace_flags ^= ImGuiDockNodeFlags_NoDockingInCentralNode; }
-			if (ImGui::MenuItem("Flag: AutoHideTabBar", "", (dockspace_flags & ImGuiDockNodeFlags_AutoHideTabBar) != 0)) { dockspace_flags ^= ImGuiDockNodeFlags_AutoHideTabBar; }
-			if (ImGui::MenuItem("Flag: PassthruCentralNode", "", (dockspace_flags & ImGuiDockNodeFlags_PassthruCentralNode) != 0, opt_fullscreen)) { dockspace_flags ^= ImGuiDockNodeFlags_PassthruCentralNode; }
-			ImGui::Separator();
+			if (ImGui::ShowStyleSelector("UI Theme##Selector"))
+				ref_saved_style = style;
 
 			ImGui::EndMenu();
 		}
 
 		ImGui::EndMenuBar();
 	}
+}
+
+
+
+/* =======================================================================  /
+/  =======	   Private Methods				==============================  /
+/  ======================================================================= */
+
+
+// Demo helper function to select among default colors. See ShowStyleEditor() for more advanced options.
+// Here we use the simplified Combo() api that packs items into a single literal string.
+// Useful for quick combo boxes where the choices are known locally.
+bool NPCManager::UI::MenuBar::show_style_selector(const char* label)
+{
+	static int style_idx = -1;
+	if (ImGui::Combo(label, &style_idx, "Dark\0Light\0Classic\0"))
+	{
+		switch (style_idx)
+		{
+		case 0: ImGui::StyleColorsDark(); break;
+		case 1: ImGui::StyleColorsLight(); break;
+		case 2: ImGui::StyleColorsClassic(); break;
+		}
+		return true;
+	}
+	return false;
 }

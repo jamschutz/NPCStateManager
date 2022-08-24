@@ -23,6 +23,8 @@ namespace NPCManager
 			// set methods
 
 		private:
+
+			bool show_style_selector(const char* label);
 		};
 	}
 
