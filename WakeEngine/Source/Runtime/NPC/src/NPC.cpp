@@ -4,6 +4,7 @@
 
 #include <string>
 #include <cstring>
+#include <iostream>
 
 /* =======================================================================  /
 /  =======	   Constructor/Destructors		==============================  /
@@ -40,5 +41,6 @@ NPCManager::NPC::~NPC() {
 
 
 std::string NPCManager::NPC::get_id() {
+	std::cout << "\nnpc with name '" << "name" << "' has id: " << id.id;
 	return id.id;
 }
