@@ -3,6 +3,7 @@
 #include <string>
 
 #include "NPCEmotion.h"
+#include "../../Utils/include/Guid.h"
 
 namespace NPCManager
 {
@@ -16,6 +17,7 @@ namespace NPCManager
 		~NPC();
 
 		// get methods
+		std::string get_id();
 
 		// set methods
 
@@ -24,6 +26,7 @@ namespace NPCManager
 
 		static const int MAX_NAME_LENGTH = 64;
 	private:
-		int id;
+		Utils::Guid id;
+		
 	};
 }

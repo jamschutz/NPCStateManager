@@ -27,6 +27,7 @@ namespace NPCManager
 		// set methods
 		void register_npc(NPC npc);
 		void delete_npc(NPC npc);
+		void update_npc(NPC npc);
 
 	private:
 		// private constructor
@@ -35,6 +36,11 @@ namespace NPCManager
 
 		// variables
 		std::vector<NPC> npcs;
+
+
+		// methods
+		int get_npc_index(NPC npc);
+
 
 	public:
 		// stop the compiler from generating copy methods

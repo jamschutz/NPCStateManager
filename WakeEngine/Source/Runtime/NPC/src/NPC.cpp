@@ -2,6 +2,7 @@
 
 #include "../include/NPC.h"
 
+#include <string>
 #include <cstring>
 
 /* =======================================================================  /
@@ -11,16 +12,19 @@
 
 NPCManager::NPC::NPC() {
 	strcpy_s(name, "");
+	emotion = Emotion::Happy;
 }
 
 
 NPCManager::NPC::NPC(char* _name) {
 	strcpy_s(name, _name);
+	emotion = Emotion::Happy;
 }
 
 
 NPCManager::NPC::NPC(const char* _name) {
 	strcpy_s(name, _name);
+	emotion = Emotion::Happy;
 }
 
 
@@ -35,3 +39,6 @@ NPCManager::NPC::~NPC() {
 /  ======================================================================= */
 
 
+std::string NPCManager::NPC::get_id() {
+	return id.id;
+}
