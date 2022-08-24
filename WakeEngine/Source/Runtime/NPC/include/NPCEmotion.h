@@ -11,7 +11,8 @@ namespace NPCManager
 		Anxious,
 		Surprised,
 		Disgusted,
-		Afraid
+		Afraid,
+		TERMINAL_VALUE // just used to make iterating easier. ALWAYS keep this the last value
 	};
 
 

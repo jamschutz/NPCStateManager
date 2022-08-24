@@ -39,11 +39,16 @@ namespace NPCManager
 			if (ImGui::TreeNode(npc.get_imgui_label().c_str()))
 			{
 				// name
-				ImGui::Text("Name: "); ImGui::SameLine();
-				ImGui::InputText(".", npc.name, NPC::MAX_NAME_LENGTH);
+				ImGui::Text("Name: "); ImGui::SameLine(0, 29);
+				ImGui::InputText("###name", npc.name, NPC::MAX_NAME_LENGTH);
 		
 				// emotion
-				ImGui::Text(("Emotion: " + emotion_to_string(npc.emotion)).c_str());
+				ImGui::Text(("Emotion: ")); ImGui::SameLine();
+				const char* items[] = { "AAAA", "BBBB", "CCCC", "DDDD" };
+				static int item = -1;
+				ImGui::Combo("###emotion", &item, items, IM_ARRAYSIZE(items));
+
+				//ImGui::Text(("Emotion: " + emotion_to_string(npc.emotion)).c_str()); ImGui::SameLine();
 		
 				// update npc name
 				NPCManager::get_instance().update_npc(npc);
