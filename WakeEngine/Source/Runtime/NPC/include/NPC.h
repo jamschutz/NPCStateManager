@@ -5,6 +5,8 @@
 #include "NPCEmotion.h"
 #include "../../Utils/include/Guid.h"
 
+#include "../../../../../ExternalLibraries/json/json.hpp"
+
 namespace NPCManager
 {
 	class NPC
@@ -14,6 +16,8 @@ namespace NPCManager
 		NPC();
 		NPC(char* _name);
 		NPC(const char* _name);
+		NPC(nlohmann::json json_data);
+		
 		~NPC();
 
 		// get methods

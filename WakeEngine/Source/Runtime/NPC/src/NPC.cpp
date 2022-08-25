@@ -28,6 +28,17 @@ NPCManager::NPC::NPC(const char* _name) {
 }
 
 
+NPCManager::NPC::NPC(nlohmann::json json_data) {
+	// parse name
+	std::string name_str = json_data["name"].get<std::string>();
+	strcpy_s(name, NPC::MAX_NAME_LENGTH, name_str.c_str());
+
+	// parse emotion
+	int emotionId = json_data["emotion"].get<int>();
+	emotion = static_cast<Emotion>(emotionId);
+}
+
+
 NPCManager::NPC::~NPC() {
 	// do nothing for now...
 }

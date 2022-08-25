@@ -24,17 +24,7 @@ namespace NPCManager
 				
 				std::vector<NPC> npcs;
 				for (auto& element : data) {
-					NPC npc;
-
-					// parse name
-					std::string name = element["name"].get<std::string>();
-					strcpy_s(npc.name, NPC::MAX_NAME_LENGTH, name.c_str());
-
-					// parse emotion
-					int emotionId = element["emotion"].get<int>();
-					npc.emotion = static_cast<Emotion>(emotionId);
-
-					// add npc to list
+					NPC npc(element);
 					npcs.push_back(npc);
 				}
 
