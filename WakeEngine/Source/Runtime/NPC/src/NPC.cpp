@@ -60,3 +60,11 @@ std::string NPCManager::NPC::get_imgui_label() {
 	label += "###" + get_id();
 	return label;
 }
+
+
+nlohmann::json NPCManager::NPC::to_json() {
+	return nlohmann::json{
+		{ "name", name },
+		{ "emotion", static_cast<int>(emotion) }
+	};
+}

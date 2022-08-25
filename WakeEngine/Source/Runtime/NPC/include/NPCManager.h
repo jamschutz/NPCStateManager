@@ -22,12 +22,15 @@ namespace NPCManager
 
 		// get methods
 		std::vector<NPC> get_npcs();
-		void load_from_file(std::string filepath);
 
 		// set methods
 		void register_npc(NPC npc);
 		void delete_npc(NPC npc);
 		void update_npc(NPC npc);
+
+		// save / load methods
+		void load_from_file(std::string filepath);
+		void save_to_file(std::string filepath);
 
 	private:
 		// private constructor

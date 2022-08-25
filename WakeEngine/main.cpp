@@ -36,5 +36,8 @@ int main() {
 		window.poll_events();
 	}
 
+	// save updates
+	NPCManager::NPCManager::get_instance().save_to_file(npc_filepath);
+
 	return 0;
 }

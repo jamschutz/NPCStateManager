@@ -30,6 +30,11 @@ namespace NPCManager
 	}
 
 
+	void NPCManager::save_to_file(std::string filepath) {
+		Utils::FileManager::save_npcs_to_file(npcs, filepath);
+	}
+
+
 	std::vector<NPC> NPCManager::get_npcs() {
 		return npcs;
 	}

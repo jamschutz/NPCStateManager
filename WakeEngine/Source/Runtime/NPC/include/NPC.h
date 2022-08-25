@@ -23,6 +23,7 @@ namespace NPCManager
 		// get methods
 		std::string get_id();
 		std::string get_imgui_label();
+		nlohmann::json to_json();
 
 		// set methods
 
