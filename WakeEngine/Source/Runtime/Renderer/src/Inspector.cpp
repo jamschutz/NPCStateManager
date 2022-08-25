@@ -57,6 +57,17 @@ namespace NPCManager
 			}
 		}
 
+		static int clicked_add_npc = 0;
+		if (ImGui::Button("+New NPC###AddNPC"))
+			clicked_add_npc++;
+		if (clicked_add_npc & 1)
+		{
+			NPC new_npc("New NPC");
+			NPCManager::get_instance().register_npc(new_npc);
+
+			clicked_add_npc = 0;
+		}
+
 		ImGui::End();
 	}
 
