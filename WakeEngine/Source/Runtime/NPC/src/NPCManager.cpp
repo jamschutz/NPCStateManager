@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../include/NPCManager.h"
+#include "../../Utils/include/FileManager.h"
 
 #include <string>
 #include <vector>
@@ -14,11 +15,7 @@ namespace NPCManager
 
 
 	NPCManager::NPCManager::NPCManager() {
-		NPC joey("Joey");
-		NPC hao("Hao");
-
-		npcs.push_back(joey);
-		npcs.push_back(hao);
+		
 	}
 
 
@@ -29,7 +26,7 @@ namespace NPCManager
 
 
 	void NPCManager::load_from_file(std::string filepath) {
-		// do nothing for now...
+		npcs = Utils::FileManager::get_npcs_from_file(filepath);
 	}
 
 
