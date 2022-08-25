@@ -170,6 +170,9 @@
     <ClInclude Include="Source\Runtime\Utils\include\Guid.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Runtime\Utils\include\FileManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Source\Shaders\frag.glsl">

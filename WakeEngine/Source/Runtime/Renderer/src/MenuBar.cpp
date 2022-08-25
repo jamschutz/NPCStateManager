@@ -34,10 +34,14 @@ void NPCManager::UI::MenuBar::render(bool& opt_fullscreen, bool& opt_padding, Im
 
 	if (ImGui::BeginMenuBar())
 	{
+		if (ImGui::BeginMenu("File")) {
+			if (ImGui::MenuItem("Save", "Ctrl+S")) {}
+			ImGui::EndMenu();
+		}
+
 		if (ImGui::BeginMenu("Options"))
 		{
 			ImGui::MenuItem("Padding", NULL, &opt_padding);
-			ImGui::Separator();
 
 			if (ImGui::ShowStyleSelector("UI Theme##Selector"))
 				ref_saved_style = style;

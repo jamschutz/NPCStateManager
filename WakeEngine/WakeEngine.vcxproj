@@ -164,6 +164,7 @@
     <ClInclude Include="Source\Runtime\Renderer\include\RenderSystem.h" />
     <ClInclude Include="Source\Runtime\Renderer\include\Window.h" />
     <ClInclude Include="Source\Runtime\Utils\include\Debug.h" />
+    <ClInclude Include="Source\Runtime\Utils\include\FileManager.h" />
     <ClInclude Include="Source\Runtime\Utils\include\Guid.h" />
   </ItemGroup>
   <ItemGroup>
